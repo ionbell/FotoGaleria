@@ -54,7 +54,8 @@ namespace PhotoGallery
             string sqlConnectionString = Configuration["ConnectionStrings:DefaultConnection"];
             bool useInMemoryProvider = bool.Parse(Configuration["Data:PhotoGalleryConnection:InMemoryProvider"]);
 
-            services.AddDbContext<PhotoGalleryContext>(options => {
+            services.AddDbContext<PhotoGalleryContext>(options =>
+            {
                 switch (useInMemoryProvider)
                 {
                     case true:

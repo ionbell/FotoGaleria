@@ -8,6 +8,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
+using PhotoGallery.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using PhotoGallery.Infrastructure.Repositories;
+using PhotoGallery.Infrastructure.Services;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace PhotoGallery
 {
     public class Program
@@ -15,13 +21,16 @@ namespace PhotoGallery
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();
+            
+
+
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseKestrel() // de chsakell
-                .UseContentRoot(Directory.GetCurrentDirectory()) // de chsakell
-                .UseIISIntegration() // de chsakell
+                //.UseKestrel() // de chsakell
+                //.UseContentRoot(Directory.GetCurrentDirectory()) // de chsakell
+                //.UseIISIntegration() // de chsakell
                 .UseStartup<Startup>()
                 .Build();
 
