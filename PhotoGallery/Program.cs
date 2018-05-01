@@ -19,7 +19,18 @@ namespace PhotoGallery
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel() // de chsakell
+                .UseContentRoot(Directory.GetCurrentDirectory()) // de chsakell
+                .UseIISIntegration() // de chsakell
                 .UseStartup<Startup>()
                 .Build();
+
+
+        //var host = new WebHostBuilder()
+        //     .UseKestrel()
+        //     .UseContentRoot(Directory.GetCurrentDirectory())
+        //     .UseIISIntegration()
+        //     .UseStartup<Startup>()
+        //     .Build();
     }
 }
