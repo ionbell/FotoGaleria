@@ -200,10 +200,13 @@ ClientBin/
 *.pfx
 *.publishsettings
 orleans.codegen.cs
-
-# Since there are multiple workflows, uncomment next line to ignore bower_components
-# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
-#bower_components/
+bower_components/
+PhotoGallery/wwwroot/lib/
+PhotoGallery/wwwroot/app/app.js
+PhotoGallery/wwwroot/app/**/*.js
+PhotoGallery/wwwroot/app/**/*.js.map
+PhotoGallery/typings
+PhotoGallery/migrations
 
 # RIA/Silverlight projects
 Generated_Code/
