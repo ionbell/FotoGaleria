@@ -22,5 +22,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="wwwroot\app\borrar.ts" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Infrastructure\Repositories\Abstract\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
   
 </Project>
